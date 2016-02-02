@@ -1,0 +1,35 @@
+{
+    "name": "cti/app",
+    "description": "Simple application",
+    "license": "MIT",    
+    "require": {
+        "cti/core": "*",
+        "cti/direct": "*",
+        "symfony/console": "*",
+        "symfony/filesystem": "*"
+
+    },
+    "suggest": {
+        "cti/saprfc": "Integrate with SAP using RFC interface"
+    },
+    "autoload": {
+        "psr-0": {
+            "Build\\" : "build/php/",
+            "Command\\" : "src/php/",
+            "Controller\\" : "src/php/",
+            "Direct\\" : "src/php/",
+            "Module\\" : "src/php/"
+        }
+    },    
+    "authors": [
+        {
+            "name": "Dmitry.Krokhin",
+            "email": "nekufa@gmail.com"
+        }
+    ],
+    "scripts": {
+        "post-create-project-cmd": [
+            "bin\\console build"
+        ]
+    }
+}
